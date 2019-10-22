@@ -7,6 +7,23 @@
 #  주문한 음료 보여주자.
 #  총 금액 계산하자. 
 from order import Order
-              
+from file_manager import Filemanager
+
+
+# 주문내역 불러오고, 보여주자
+file_manager = Filemanager("history.bin")
+#answer = input("주문내역을 볼까요?(y or n)")
+print("sdjfoisj")
+#if answer == "y":
+try:
+    history = file_manager.load()
+    for h in history:
+        print(h)
+except FileNotFoundError:
+    print("주문내역이 없습니다.")
+
 o = Order()
 o.order_drink()
+
+# 주문내역 저장하자
+file_manager.save(o.order_menu)
