@@ -10,9 +10,10 @@ class TicTacToe:
         # else:
         #     self.current_turn = "O"
 
-        self.current_turn = "X" if self.current_turn == "O" else "O"
-        self.board[(row * 3) + col] = self.current_turn
-
+            self.current_turn = "X" if self.current_turn == "O" else "O"
+            self.board[(row * 3) + col] = self.current_turn
+        else:
+            print("빈칸이 아니에요. 제대로 잘 입력해요.")
 
 
     def get(self, row, col):

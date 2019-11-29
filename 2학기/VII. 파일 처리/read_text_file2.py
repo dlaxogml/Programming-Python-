@@ -2,6 +2,7 @@ fi = open("history.ama", "r", encoding = "utf-8")
 sum = 0
 while True:
     data = fi.readline()
+    print(data)
     if not data:
         break
     #print(data, end = "")
@@ -14,4 +15,3 @@ while True:
 print("총금액 : " + str(sum) + "원")
 
 fi.close()
-#print(data)
